@@ -6,11 +6,11 @@
 <body>
 <div id="output"></div>
 <script "type/javascript">
-	var jcontent = $.getJSON("result.json");
+	var jcontent = $.getJSON({"result.json", 'async': false});
 // 	var json = $.getJSON({"result.json", 'aync': false});  
 
 	var parsedJSON = JSON.parse(jcontent);
-	var stringified = JSON.stringify(parsedJSON["1261-10-1"];);
+	var stringified = JSON.stringify(parsedJSON["1261-10-1"]);
 	document.getElementById('output').innerHTML = stringified; 
 </script>
 </body>
