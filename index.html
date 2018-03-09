@@ -33,10 +33,11 @@ readTextFile("result.json", function(text){
     var data = JSON.parse(text);
     console.log(data);
     var stringified = JSON.stringify(data[getValue]);
-//     document.getElementById('output').innerHTML = stringified; 
+	alert(JSON.stringify(data[getValue]));
+    document.getElementById('output').innerHTML = stringified; 
     
     var xmlhttp = new XMLHttpRequest(); 
-    xmlhttp.open("POST", "/json-handler");
+    xmlhttp.open("GET", "/json-handler");
     xmlhttp.setRequestHeader("Content-Type", "application/json");
     xmlhttp.send(stringified);
 	
