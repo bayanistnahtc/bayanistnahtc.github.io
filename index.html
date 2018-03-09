@@ -6,7 +6,16 @@
 <body>
 <div id="output"></div>
 <script "type/javascript">
-	function readTextFile(file, callback) {
+
+var url = require('url');
+app.get('/status', function(req, res) {
+  var parts = url.parse(req.url, true);
+  var query = parts.query;
+  console.log(req.query.userID);
+})
+	
+	
+function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
     rawFile.open("GET", file, true);
