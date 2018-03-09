@@ -8,11 +8,11 @@
 <script "type/javascript">
 
 
-var regexp = /group=(.*);
+var regexp = /group=.*/i;
     var GetValue = '';
     if (!!regexp.exec(document.location.search)) 
-        GetValue = regexp.exec(document.location.search)[1];
-console.log(GetValue);
+	console.log(regexp.exec(document.location.search));
+
 	
 	
 function readTextFile(file, callback) {
