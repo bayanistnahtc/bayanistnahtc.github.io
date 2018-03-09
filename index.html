@@ -6,13 +6,13 @@
 <body>
 <div id="output"></div>
 <script "type/javascript">
-// 	var jcontent = $.getJSON('result.json', function(data) {
-// 		  console.log( "success" );
-// 	});
-	var json = $.getJSON({"result.json", 'aync': false});  
+	var jcontent = $.getJSON("result.json", function(data) {
+		  console.log( "success" );
+	});
+// 	var json = $.getJSON({"result.json", 'aync': false});  
 
-	var parsedJSON = JSON.parse(json);
-	var stringified = JSON.stringify(jcontent["1261-10-1"];);
+	var parsedJSON = JSON.parse(jcontent);
+	var stringified = JSON.stringify(parsedJSON["1261-10-1"];);
 	document.getElementById('output').innerHTML = stringified; 
 </script>
 </body>
