@@ -12,9 +12,7 @@ var regexp = /group=.*/i;
     var getValue = '';
     if (!!regexp.exec(document.location.search)) 
 	getValue = regexp.exec(document.location.search)[0];
-	
-	console.log(getValue.split('=')[1]);
-// 	getValue.replace(/\s/g,'')
+	getValue = getValue.split('=')[1].replace(/\s/g,'');
 
 	
 	
@@ -34,7 +32,7 @@ function readTextFile(file, callback) {
 readTextFile("result.json", function(text){
     var data = JSON.parse(text);
     console.log(data);
-    var stringified = JSON.stringify(data["1261-10-1"]);
+    var stringified = JSON.stringify(data[getValue]);
     document.getElementById('output').innerHTML = stringified; 
 });
 	
