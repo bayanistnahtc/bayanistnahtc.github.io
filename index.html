@@ -7,17 +7,11 @@
 <div id="output"></div>
 <script>
 	var jcontent ={
-		       "dayofweek": "Monday",
-		       "one": "ОП Е-321",
-		       "two": "",
-		       "three": "Физ. Воспитание",
-		       "four": "",
-		       "five": "ТМО л+л.з И-349",
-		       "six": "ТМО л+л.з И-349",
-		       "seven": ""
+		"firstName":"John"
 	}
+	var parsedJSON = JSON.parse(jcontent);
 	var output = document.getElementById('output');
-	output.innerHTML = jcontent.dayofweek; 
+	output.innerHTML = parsedJSON; 
 </script>
 </body>
 </html>
