@@ -5,11 +5,29 @@
 </head>
 <body>
 <div id="output"></div>
-	<script type="text/javascript" src="result.json"></script>
 <script "type/javascript">
-	var parsedJSON = JSON.parse(result);
+	function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
+//usage:
+readTextFile("result.json", function(text){
+    var data = JSON.parse(text);
+    console.log(data);
+	var parsedJSON = JSON.parse(data);
 	var stringified = JSON.stringify(parsedJSON["1261-10-1"]);
 	document.getElementById('output').innerHTML = stringified; 
+});
+	
+
 </script>
 </body>
 </html>
