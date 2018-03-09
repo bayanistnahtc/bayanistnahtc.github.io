@@ -11,17 +11,6 @@
 // 	});
 	var json = $.getJSON({"result.json", 'aync': false});  
 
-// 	var jcontent = '"1261-10-1":[
-//      {
-//        "dayofweek": "Monday",
-//        "one": "ОП Е-321",
-//        "two": "",
-//        "three": "Физ. Воспитание",
-//        "four": "",
-//        "five": "ТМО л+л.з И-349",
-//        "six": "ТМО л+л.з И-349",
-//        "seven": ""
-//      }';
 	var parsedJSON = JSON.parse(json);
 	var stringified = JSON.stringify(jcontent["1261-10-1"];);
 	document.getElementById('output').innerHTML = stringified; 
