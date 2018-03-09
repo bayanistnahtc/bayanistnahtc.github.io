@@ -6,19 +6,23 @@
 <body>
 <div id="output"></div>
 <script "type/javascript">
-	var jcontent = '"1261-10-1":[
-     {
-       "dayofweek": "Monday",
-       "one": "ОП Е-321",
-       "two": "",
-       "three": "Физ. Воспитание",
-       "four": "",
-       "five": "ТМО л+л.з И-349",
-       "six": "ТМО л+л.з И-349",
-       "seven": ""
-     }';
-	var parsedJSON = JSON.parse(jcontent);
-	var stringified = JSON.stringify(parsedJSON["1261-10-1"];);
+	var jcontent;
+	$.getJSON('result.json', function(data) {
+		  jcontent = data;
+	});
+// 	var jcontent = '"1261-10-1":[
+//      {
+//        "dayofweek": "Monday",
+//        "one": "ОП Е-321",
+//        "two": "",
+//        "three": "Физ. Воспитание",
+//        "four": "",
+//        "five": "ТМО л+л.з И-349",
+//        "six": "ТМО л+л.з И-349",
+//        "seven": ""
+//      }';
+// 	var parsedJSON = JSON.parse(jcontent);
+	var stringified = JSON.stringify(jcontent["1261-10-1"];);
 	document.getElementById('output').innerHTML = stringified; 
 </script>
 </body>
