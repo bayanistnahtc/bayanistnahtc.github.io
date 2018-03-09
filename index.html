@@ -4,7 +4,7 @@
 	<!-- <title></title> -->
 </head>
 <body>
-<!-- <code id="output"></code> -->
+<div id="output"></div>
 <script "type/javascript">
 
 
@@ -33,7 +33,7 @@ readTextFile("result.json", function(text){
     var data = JSON.parse(text);
     console.log(data);
     var stringified = JSON.stringify(data[getValue]);
-	alert(JSON.stringify(data[getValue]));
+// 	alert(JSON.stringify(data[getValue]));
     document.getElementById('output').innerHTML = stringified; 
     
     var xmlhttp = new XMLHttpRequest(); 
