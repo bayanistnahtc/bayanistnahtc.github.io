@@ -36,7 +36,7 @@ readTextFile("result.json", function(text){
 //     document.getElementById('output').innerHTML = stringified; 
     
     var xmlhttp = new XMLHttpRequest(); 
-    xmlhttp.open("GET", "/json-handler");
+    xmlhttp.open("POST", "/json-handler");
     xmlhttp.setRequestHeader("Content-Type", "application/json");
     xmlhttp.send(stringified);
 	
