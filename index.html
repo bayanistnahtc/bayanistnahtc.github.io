@@ -9,9 +9,12 @@
 
 
 var regexp = /group=.*/i;
-    var GetValue = '';
+    var getValue = '';
     if (!!regexp.exec(document.location.search)) 
-	console.log(regexp.exec(document.location.search));
+	getValue = regexp.exec(document.location.search)[0];
+	
+	console.log(getValue.split('=')[1]);
+// 	getValue.replace(/\s/g,'')
 
 	
 	
