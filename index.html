@@ -7,13 +7,12 @@
 <div id="output"></div>
 <script "type/javascript">
 
-// var parts = location.pathname.match(([a-z0-9_-]+));
 
-// var regexp = /limit=([^&]+)/i;
-//     var GetValue = '';
-//     if (!!regexp.exec(document.location.search)) 
-//         GetValue = regexp.exec(document.location.search)[1];
-console.log(document.location.href);
+var regexp = /group=(.*);
+    var GetValue = '';
+    if (!!regexp.exec(document.location.search)) 
+        GetValue = regexp.exec(document.location.search)[1];
+console.log(GetValue);
 	
 	
 function readTextFile(file, callback) {
