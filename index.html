@@ -6,10 +6,11 @@
 <body>
 <div id="output"></div>
 <script "type/javascript">
-	var jcontent;
-	$.getJSON('result.json', function(data) {
-		  jcontent = data;
-	});
+// 	var jcontent = $.getJSON('result.json', function(data) {
+// 		  console.log( "success" );
+// 	});
+	var json = $.getJSON({"result.json", 'aync': false});  
+
 // 	var jcontent = '"1261-10-1":[
 //      {
 //        "dayofweek": "Monday",
@@ -21,7 +22,7 @@
 //        "six": "ТМО л+л.з И-349",
 //        "seven": ""
 //      }';
-// 	var parsedJSON = JSON.parse(jcontent);
+	var parsedJSON = JSON.parse(json);
 	var stringified = JSON.stringify(jcontent["1261-10-1"];);
 	document.getElementById('output').innerHTML = stringified; 
 </script>
