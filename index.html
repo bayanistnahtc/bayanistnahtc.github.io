@@ -22,8 +22,7 @@
 readTextFile("result.json", function(text){
     var data = JSON.parse(text);
     console.log(data);
-	var parsedJSON = JSON.parse(data);
-	var stringified = JSON.stringify(parsedJSON["1261-10-1"]);
+	var stringified = JSON.stringify(data["1261-10-1"]);
 	document.getElementById('output').innerHTML = stringified; 
 });
 	
