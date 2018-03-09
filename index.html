@@ -5,13 +5,12 @@
 </head>
 <body>
 <div id="output"></div>
-<script>
+<script "type/javascript">
 	var jcontent ={
 		"firstName":"John"
 	}
 	var parsedJSON = JSON.parse(jcontent);
-	var output = document.getElementById('output');
-	output.innerHTML = parsedJSON.firstName; 
+	document.getElementById('output').innerHTML = parsedJSON.firstName; 
 </script>
 </body>
 </html>
