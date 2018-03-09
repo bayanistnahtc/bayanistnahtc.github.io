@@ -7,12 +7,8 @@
 <div id="output"></div>
 <script "type/javascript">
 
-var url = require('url');
-app.get('/status', function(req, res) {
-  var parts = url.parse(req.url, true);
-  var query = parts.query;
-  console.log(req.query.userID);
-})
+var parts = location.pathname.match(/([a-z0-9_-]+)/ig);
+console.log(parts);
 	
 	
 function readTextFile(file, callback) {
