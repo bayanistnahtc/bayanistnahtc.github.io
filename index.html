@@ -6,9 +6,7 @@
 <body>
 <div id="output"></div>
 <script "type/javascript">
-	var jcontent ={
-		"firstName":"John"
-	}
+	var jcontent = '{ "firstName":"John" }';
 	var parsedJSON = JSON.parse(jcontent);
 	document.getElementById('output').innerHTML = parsedJSON.firstName; 
 </script>
