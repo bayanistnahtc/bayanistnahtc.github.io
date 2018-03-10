@@ -34,7 +34,7 @@ readTextFile("result.json", function(text){
     console.log(data);
     var stringified = JSON.stringify(data[getValue]);
 // 	alert(JSON.stringify(data[getValue]));
-    document.getElementById('output').innerHTML = "{ " + stringified + " }"; 
+    document.getElementById('output').innerHTML =  stringified ; 
     
     var xmlhttp = new XMLHttpRequest(); 
     xmlhttp.open("GET", "/json-handler");
