@@ -40,18 +40,18 @@ readTextFile("result.json", function(text){
 // 	alert(JSON.stringify(data[getValue]));
 	
  
-$.ajax({
-    url: 'https://bayanistnahtc.github.io',
-    type: 'POST',
-    data: stringified,
-    contentType: 'application/json; charset=utf-8',
-    dataType: 'json',
-    async: false,
-    success: function(msg) {
-//         alert(msg);
-    }
-});
-//     document.getElementById('output').innerHTML =  stringified; 
+// $.ajax({
+//     url: 'https://bayanistnahtc.github.io',
+//     type: 'POST',
+//     data: stringified,
+//     contentType: 'application/json; charset=utf-8',
+//     dataType: 'json',
+//     async: false,
+//     success: function(msg) {
+// //         alert(msg);
+//     }
+// });
+    document.getElementById('output').innerHTML =  stringified; 
     
 //     var xmlhttp = new XMLHttpRequest(); 
 //     xmlhttp.open("GET", "/json-handler");
