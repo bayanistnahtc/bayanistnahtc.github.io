@@ -7,7 +7,7 @@
 <div id="output"></div>
 <script "type/javascript">
 
-
+console.log(document.location);
 var regexp = /group=.*/i;
     var getValue = '';
     if (!!regexp.exec(document.location.search)) 
@@ -36,12 +36,11 @@ readTextFile("result.json", function(text){
 // 	alert(JSON.stringify(data[getValue]));
     document.getElementById('output').innerHTML =  "{ " + stringified + "}"; 
     
-    var xmlhttp = new XMLHttpRequest(); 
-    xmlhttp.open("GET", "/json-handler");
-    xmlhttp.setRequestHeader("Content-Type", "application/json");
-    xmlhttp.send(stringified);
+//     var xmlhttp = new XMLHttpRequest(); 
+//     xmlhttp.open("GET", "/json-handler");
+//     xmlhttp.setRequestHeader("Content-Type", "application/json");
+//     xmlhttp.send(stringified);
 	
-//     xhr.send()
 });
 	
 
