@@ -5,6 +5,10 @@
 </head>
 <body>
 <div id="output"></div>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.map"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	
 <script "type/javascript">
 
 console.log(document.location);
@@ -34,7 +38,20 @@ readTextFile("result.json", function(text){
     console.log(data);
     var stringified = JSON.stringify(data[getValue]);
 // 	alert(JSON.stringify(data[getValue]));
-    document.getElementById('output').innerHTML =  stringified; 
+	
+ 
+$.ajax({
+    url: 'https://bayanistnahtc.github.io',
+    type: 'POST',
+    data: stringified,
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    async: false,
+    success: function(msg) {
+//         alert(msg);
+    }
+});
+//     document.getElementById('output').innerHTML =  stringified; 
     
 //     var xmlhttp = new XMLHttpRequest(); 
 //     xmlhttp.open("GET", "/json-handler");
